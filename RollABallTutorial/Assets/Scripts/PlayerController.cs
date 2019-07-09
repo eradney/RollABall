@@ -59,11 +59,7 @@ public class PlayerController : MonoBehaviour
         }
         if (lives == 0)
         {
-            Destroy(this);
-            void DestroyComponent()
-            {
-                Destroy(GetComponent<Rigidbody>());
-            }
+            gameObject.SetActive(false);
             loseText.text = "You Lose :(";
         }
     
